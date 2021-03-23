@@ -34,7 +34,7 @@
         $config['full_tag_close']   =   '</ul></nav></div>';
         $config['num_tag_open']     =   '<li class="page-item"><span class="page-link">';
         $config['num_tag_close']    =   '</span></li>';
-        
+
         $config['cur_tag_open']     =   '<li class="page-item active"><span class="page-link">';
         $config['cur_tag_close']    =   '<span class="sr-only">(current)</span></span></li>';
 
@@ -55,7 +55,7 @@
         $data["pagination"]=$this->pagination->create_links();
         $data["result"]=$this->siswa_model->getsiswaperpage($p,$per_page);
 
-        //Load to View
+        //Load view
         $this->load->view("siswa_paging_view", $data);
 
         }
