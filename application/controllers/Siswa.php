@@ -13,14 +13,14 @@
             $this->load->view('siswa_view', $data);
         }
 
-        //fungsi untuk membuat pagination
-        public function page($p=0){
+        //Fungsi untuk membuat pagination
+        public function page($p=0) {
             $per_page = 5;
 
-        //Load liblary pagination
+        // Load library pagination
         $this->load->library('pagination');
 
-        //Konfigurasi pagination
+        // Konfigurasi pagination
         $config['base_url'] = site_url().'/siswa/page/';
         $config['total_rows'] = $this->siswa_model->getjumlahdata();
         $config['per_page'] = $per_page;
@@ -32,9 +32,9 @@
         $config['prev_link']    =   'Prev';
         $config['full_tag_open']    =   '<div class="paging text-center"><nav><ul class="pagination justify-content-center">';
         $config['full_tag_close']   =   '</ul></nav></div>';
-        $config['num_tag-open']     =   '<li class="page-item active"><span class="page-link">';
+        $config['num_tag_open']     =   '<li class="page-item"><span class="page-link">';
         $config['num_tag_close']    =   '</span></li>';
-        $config['cur_tag_open']     =   '<li class="page-item"><span class="page-link">';
+        $config['cur_tag_open']     =   '<li class="page-item active"><span class="page-link">';
         $config['cur_tag_close']    =   '<span class="sr-only">(current)</span></span></li>';
 
         $config['next_tag_open']    =   '<li class="page-item"><span class="page-link">';
@@ -43,7 +43,7 @@
         $config['prev_tag_open']    =   '<li class="page-item"><span class="page-link">';
         $config['prev_tagl_close']  =   '</span>Next</li>';
 
-        $config['first_tag_open']   =   '<li class="page-item"<span class="page-link">';
+        $config['first_tag_open']   =   '<li class="page-item"><span class="page-link">';
         $config['first_tagl_close'] =   '</span></li>';
 
         $config['last_tag_open']    =   '<li class="page-item"><span class="page-link">';
