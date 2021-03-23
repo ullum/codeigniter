@@ -37,9 +37,12 @@
                                 <td><?php echo $row->nama; ?></td>
                                 <td><?php echo $row->kota; ?></td>
                             </tr>
+
+
                         <?php endforeach; ?>
                         </tbody>
                 </table>
+                
             </div>
         </div>
     </div>
