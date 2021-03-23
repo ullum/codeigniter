@@ -1,8 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
+<html >
 
 <head>
-    <meta charset="utf-8">
+    
     <title>Daftar Siswa</title>
     <!-- load bootstrap css file -->
     <link href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>" rel="stylesheet">
@@ -41,8 +40,8 @@
             </div>
         </div>
     </div>
-    <!-- Load bootstrap js file -->
-        <script src="<?php echo base_url('assets/js/jquery.min.js'); ?>"></script>
+    <!-- load bootstrap js file -->
+    <script src="<?php echo base_url('assets/js/jquery.min.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/popper.min.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>"></script>
 </body>
