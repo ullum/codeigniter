@@ -52,7 +52,7 @@
 
                 
 
-                <input type="hidden" name="nim" value="<?php echo $no ?>">
+                <input type="hidden" name="No" value="<?php echo $no ?>">
                 <button type="submit" class="btn btn-primary">Update</button>
             </form>
         </div>
