@@ -14,7 +14,13 @@
             <div class="col-lg-12">
                 <br>
                 <h1>Daftar Siswa</h1>
+
+
                 <br>
+                <!-- Membuat tombol add -->
+                <a href="<?php echo site_url('siswa/add'); ?>" class="btn btn-primary">Add </a>
+                <br><br>
+
                 <table class="table table-bordered">
                     <thead>
                         <tr>
@@ -33,6 +39,9 @@
                                 <th scope="row"><?php echo $count; ?></th>
                                 <td><?php echo $row->nama; ?></td>
                                 <td><?php echo $row->kota; ?></td>
+                                <td><?php echo $row->kota; ?></td>
+                                <td><a href="<?php echo site_url('siswa/delete/' . $row->nim); ?>" onclick="return deletechecked();" class="btn btn-sm btn-danger">Delete</a>
+                                <a href="<?php echo site_url('siswa/edit/'.$row->nim);?>" class="btn btn-sm btn-info">Update</a></td>
                             </tr>
                         <?php endforeach; ?>
                         </tbody>
@@ -41,6 +50,22 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // fungsi javascript untuk memunculkan peringatan sebelum data
+        dihapus
+
+        function deletechecked() {
+            if (confirm("Apakah yakin akan menghapus data?")) 
+            {
+                return true;
+            }
+            else 
+            {
+                return false;
+            }
+        }
+    </script>
     <!-- Load bootstrap js file -->
     <script src="<?php echo base_url('assets/js/jquery.min.js'); ?>"></script>
     <script src="<?php echo base_url('assets/js/popper.min.js'); ?>"></script>
