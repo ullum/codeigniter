@@ -51,6 +51,8 @@ class User extends CI_Controller
             $pass = md5($this->input->post('pass', true));
             $cek = $this->user_model->proseslogin($user, $pass);
             $hasil = count($cek);
+            // $hasil = print_r(count(array($cek)));
+
             if ($hasil > 0) {
                 $pelogin = $this->db->get_where('user', array('username'
                 => $user, 'password' => $pass))->row();
